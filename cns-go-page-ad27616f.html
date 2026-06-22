@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>球场之外 · 世界杯随想</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f2f7fa;
+      color: #1b2d36;
+      line-height: 1.7;
+      padding: 20px 16px 40px;
+      min-height: 100vh;
+    }
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    /* 卡片网格 – 博客式氛围 */
+    .grid-card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 6px 20px rgba(25, 70, 85, 0.06);
+      padding: 28px 24px;
+      margin-bottom: 28px;
+      transition: box-shadow 0.2s ease;
+    }
+    .grid-card:hover {
+      box-shadow: 0 12px 28px rgba(20, 80, 90, 0.08);
+    }
+    /* 标题区 – 温和蓝绿 */
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0f3944;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .subhead {
+      font-size: 1rem;
+      color: #3b6e7c;
+      border-left: 4px solid #57a6b1;
+      padding-left: 14px;
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #124d5b;
+      margin: 24px 0 12px;
+      border-bottom: 1px solid #d9e7ec;
+      padding-bottom: 6px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #1f5d6b;
+      margin: 24px 0 8px;
+    }
+    p {
+      margin-bottom: 18px;
+      color: #213e48;
+    }
+    a {
+      color: #197a88;
+      text-decoration: none;
+      border-bottom: 1px solid #afd5dd;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: #054f5c;
+      border-bottom-color: #197a88;
+    }
+    /* 引用区和提示块 */
+    .insight-block {
+      background: #e0f1f5;
+      border-radius: 20px;
+      padding: 20px 24px;
+      margin: 28px 0;
+      border-left: 5px solid #57a6b1;
+      color: #13454f;
+      font-style: normal;
+    }
+    .insight-block p {
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+    .insight-block cite {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #3d7785;
+    }
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .faq-item {
+      background: #f6fbfd;
+      border-radius: 16px;
+      padding: 16px 20px;
+      border: 1px solid #d7e8ed;
+    }
+    .faq-item strong {
+      color: #0f4d5a;
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 550;
+    }
+    .faq-item p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+    .dot-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 6px;
+    }
+    .dot-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+    }
+    .dot-list li::before {
+      content: "◈";
+      position: absolute;
+      left: 0;
+      color: #4e9aa8;
+      font-size: 1.1rem;
+    }
+    .visit-sentence {
+      background: #ffffff;
+      border: 1px solid #cde2e8;
+      border-radius: 24px;
+      padding: 20px 24px;
+      text-align: center;
+      margin: 28px 0 10px;
+      font-size: 1.05rem;
+    }
+    .visit-sentence a {
+      font-weight: 500;
+    }
+    .footer-note {
+      font-size: 0.85rem;
+      color: #65858f;
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #d4e4ea;
+      padding-top: 25px;
+    }
+    /* 移动端紧凑优化 */
+    @media (max-width: 480px) {
+      body { padding: 16px 12px 32px; }
+      .grid-card { padding: 20px 16px; }
+      h1 { font-size: 1.7rem; }
+      .insight-block { padding: 16px 18px; }
+      .visit-sentence { padding: 16px; }
+    }
+    @media (min-width: 600px) {
+      .two-col-scene {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+    .scene-card {
+      background: #f8fcfd;
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid #cfdfe5;
+      margin-bottom: 16px;
+    }
+    .scene-card p:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 博客标题 + 导语 -->
+  <article class="grid-card">
+    <h1>绿茵叙事 · 世界共鸣</h1>
+    <div class="subhead">从一个词语出发，探寻四年的心跳与目光</div>
+    <p style="font-size: 1.02rem;">
+      当我们谈论世界杯，我们在谈论什么？是哨音响起的瞬间，还是跨越时区与语言的呐喊？它不只是一项赛事，更像一扇窗——透过它，人们看见技艺、激情、偶然与必然的交织。这个夏天，或者任何一个夏天，球场上总有一个故事正在发生。
+    </p>
+  </article>
+
+  <!-- 多段正文 – 温和展开 -->
+  <div class="grid-card">
+    <h2>主题背后 · 一粒进球的重量</h2>
+    <p>
+      每一届世界杯都像一部多线叙事的小说。从预选赛的泥泞到决赛夜的星光，球员的命运与国家的期待被编织在一起。有人一战成名，有人黯然离场。但有趣的是，足球之所以迷人，恰恰是因为它不完全由实力决定——一次反弹、一个判罚、一阵风，都可能改写结局。这种不确定性让每场比赛都像一次微型人生。
+    </p>
+    <p>
+      对于许多人而言，世界杯的记忆往往与某个瞬间捆绑：1998 年齐达内的两记头球、2014 年格策的绝杀、又或者只是一群朋友围坐在屏幕前的欢呼。这些画面之所以珍贵，不只是因为胜负，更因为它们标记了我们的时间线，成为回忆里清晰的路标。
+    </p>
+
+    <!-- 引用提示块 -->
+    <div class="insight-block">
+      <p>“足球是简单的游戏，但简单的游戏里藏着最复杂的情绪。” —— 这句被反复引用的话，恰好说明了世界杯为何能超越体育本身，成为一种文化符号。</p>
+      <cite>—— 摘自《足球的诗意时刻》</cite>
+    </div>
+
+    <h3>不止于竞技 · 一种共同语言</h3>
+    <p>
+      世界杯期间，不同语言、肤色、信仰的人会突然拥有共同话题。地铁里、便利店里、街角咖啡馆，人们因为一场比赛而短暂相连。那种氛围是奇妙的——仿佛整个世界被缩小成一个球场，所有人都在注视同一片草地。你可以不必是资深球迷，也能感受到那种集体的脉动。
+    </p>
+    <p>
+      也正因如此，关于世界杯的讨论往往延伸到足球之外：主办城市的文化、球迷的创意助威、甚至赛事期间的天气变化。这些细节构成了赛事的血肉，让它不再只是比分板上的数字。
+    </p>
+  </div>
+
+  <!-- 特点 / 场景卡片（网格式） -->
+  <div class="grid-card">
+    <h2>四个场景 · 不同切面</h2>
+    <div class="two-col-scene">
+      <div class="scene-card">
+        <strong style="color:#13626e;">🏟️ 看台之上</strong>
+        <p>当几万人同时唱起一首歌，音浪会震得人胸口发麻。那种归属感无法被屏幕传递，只有身临其境才能理解。</p>
+      </div>
+      <div class="scene-card">
+        <strong style="color:#13626e;">📺 深夜客厅</strong>
+        <p>闹钟在凌晨三点响起，睡眼惺忪地打开电视，却发现困意早已被场上的狂奔驱散。这是属于时差党的仪式感。</p>
+      </div>
+      <div class="scene-card">
+        <strong style="color:#13626e;">📱 数字广场</strong>
+        <p>社交媒体上实时更新的梗图、表情包、赛后分析——即使无法到场，人们也用另一种方式参与着这场狂欢。</p>
+      </div>
+      <div class="scene-card">
+        <strong style="color:#13626e;">🧓 记忆回响</strong>
+        <p>老球迷翻出泛黄的球星卡，讲起几十年前那场雨战。世界杯像一本家庭相册，每翻一页都有一段往事。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要 – 温和设问 -->
+  <div class="grid-card">
+    <h2>一些常见的疑问与随想</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <strong>世界杯为什么值得关注？</strong>
+        <p>因为它提供了一个宏大的背景，让个体的情感得以投射。你可以为一支球队欢呼，也可以单纯欣赏一次精妙的配合；无论立场如何，总能找到属于自己的角度。</p>
+      </div>
+      <div class="faq-item">
+        <strong>如何理解那些狂热的球迷？</strong>
+        <p>热爱不需要理由，但可以解释：当一个人把青春、记忆、甚至家族传统与一支球队绑定，那份情感就超出了胜负本身。与其说他们在看球，不如说他们在重温自己的故事。</p>
+      </div>
+      <div class="faq-item">
+        <strong>世界杯结束后，留下了什么？</strong>
+        <p>除了冠军奖杯，还有无数被记录的瞬间：泪水、笑容、争议、和解。它们成为下一届赛事之前，人们反复咀嚼的养分。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 访问句 + 自然链接（严格符合要求） -->
+  <div class="visit-sentence">
+    <p style="margin-bottom: 0;">
+      如果你也希望了解更多关于这项赛事的信息，可以前往
+      <a href="https://cns-go-fifaworldcup.com">世界杯</a>
+      页面，那里有更完整的资料与动态。无论你是老球迷还是新朋友，总能找到吸引你的内容。
+    </p>
+  </div>
+
+  <!-- 结尾提示 / 摘要 -->
+  <div class="grid-card" style="background: #eaf4f8;">
+    <p style="font-size: 0.98rem;">
+      四年一次的世界杯，像地球村的一次大型聚会。我们或许记不住每一场比分，但会记住某个午后或深夜，自己曾为一次射门屏住呼吸。那种纯粹的沉浸，或许就是这项运动最朴素的魅力。
+    </p>
+    <p style="margin-bottom: 0; color: #2e6c7a;">
+      愿你在接下来的赛事周期里，找到属于自己的那个瞬间。
+    </p>
+  </div>
+
+  <div class="footer-note">
+    <span>⚽ 温和叙事 · 球场随笔</span>
+  </div>
+
+</div>
+</body>
+</html>
