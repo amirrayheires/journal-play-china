@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 数字专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf7f2;
+            font-family: 'Georgia', 'Noto Serif SC', 'Songti SC', serif;
+            color: #2e2b27;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fffcf8;
+            padding: 2.8rem 2.2rem;
+            border-radius: 20px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0, 0, 0, 0.04);
+        }
+
+        /* hero 横幅 — 杂志式标题区 */
+        .hero {
+            border-bottom: 1px solid #e1d9cf;
+            padding-bottom: 1.8rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #1f1b17;
+            margin-bottom: 0.6rem;
+            line-height: 1.2;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #6b6156;
+            font-style: italic;
+            border-left: 3px solid #c7b5a2;
+            padding-left: 1rem;
+            margin-top: 0.3rem;
+        }
+
+        /* 背景说明卡片 */
+        .context-box {
+            background: #f3ede6;
+            border-radius: 14px;
+            padding: 1.6rem 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #ded6cb;
+        }
+
+        .context-box p {
+            font-size: 1rem;
+            color: #3b3530;
+        }
+
+        .context-box strong {
+            color: #8b3a1a;
+            font-weight: 600;
+        }
+
+        /* 正文段落样式 */
+        .section {
+            margin: 1.8rem 0;
+        }
+
+        .section h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #3b2f26;
+            border-bottom: 1px dashed #d9cfc3;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            margin-bottom: 1.1rem;
+            text-align: justify;
+        }
+
+        .inset-quote {
+            background: #fcf8f3;
+            border-left: 4px solid #b2815d;
+            padding: 0.9rem 1.4rem;
+            margin: 1.4rem 0;
+            font-size: 0.95rem;
+            color: #554b41;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .inset-quote::before {
+            content: "▌ ";
+            font-size: 1.2rem;
+            color: #7f5d44;
+        }
+
+        /* 特点列表 — 风格干净 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.6rem 0;
+        }
+
+        .feature-item {
+            flex: 1 1 200px;
+            background: #f8f3ec;
+            padding: 1rem 1.3rem;
+            border-radius: 12px;
+            border: 1px solid #e7ddd2;
+        }
+
+        .feature-item h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #4f3d2f;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: #4f463d;
+        }
+
+        /* 尾页访问提示 */
+        .footer-note {
+            margin-top: 2.6rem;
+            padding: 1.4rem 2rem;
+            background: #ece5db;
+            border-radius: 40px 12px 40px 12px;
+            text-align: center;
+            font-size: 1rem;
+            color: #2e2721;
+            border: 1px solid #d6cbbd;
+        }
+
+        .footer-note a {
+            color: #7f4a26;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dotted #7f4a26;
+            transition: border-bottom 0.2s, color 0.2s;
+        }
+
+        .footer-note a:hover {
+            color: #3f2b1d;
+            border-bottom: 2px solid #3f2b1d;
+        }
+
+        .faq-mini {
+            margin-top: 1.4rem;
+            background: #fffcf8;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            border: 1px solid #ddd3c7;
+            font-size: 0.9rem;
+            color: #5d5147;
+            display: inline-block;
+        }
+
+        .faq-mini span {
+            font-weight: 500;
+            color: #3b2a1d;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 0.8rem;
+            }
+            .page {
+                padding: 1.6rem 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .feature-grid {
+                flex-direction: column;
+            }
+            .context-box {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 横幅 -->
+    <div class="hero">
+        <h1>世界杯 · 赛程之外的叙事</h1>
+        <div class="sub">从球员数据到球迷记忆 —— 一个数字文献库的沉淀</div>
+    </div>
+
+    <!-- 背景说明 -->
+    <div class="context-box">
+        <p><strong>世界杯</strong>早已超越单纯的锦标赛事。它是一套不断生长的文化符号、一份跨越代际的视觉档案。<br>
+        在主流转播与集锦之外，仍有大量原始资料、统计文档与历史记录散落于各个角落。<br>
+        聚合、整理并开放这些资源，是让赛事记忆保持鲜活的基础工作。</p>
+    </div>
+
+    <!-- 三段自然介绍 -->
+    <div class="section">
+        <h2>资料图志 · 未被剪辑的片段</h2>
+        <p>每一届<a href="https://wc-downloads-fifa.com">世界杯</a>都留下数以千计的官方报告、技术统计与比赛用图。这些材料往往只出现在内部档案或研究论文中，极少以系统化的方式面向公众。通过对历届赛事文件的数字化梳理，可以拼凑出更完整的赛事肌理 —— 从战术演变到场外事件，从裁判报告到球队筹备笔记。</p>
+        <div class="inset-quote">
+            例如 1978 年阿根廷世界杯的场地规格调整记录，至今仍对运动工程学有参考价值。
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>结构化的历史数据</h2>
+        <p>相比精彩集锦，赛后的详细数据往往更能反映比赛的真实进程。射门分布、跑动热区、换人时机…… 这些参数在官方 PDF 中常以表格或手写注释形式存在。将这些分散的信息整合为可检索的数据库，是理解<a href="https://wc-downloads-fifa.com">世界杯</a>技术演进的重要路径。同时，早期赛事的秩序册与官方公报也记录了足球规则修订的渐变过程。</p>
+    </div>
+
+    <div class="section">
+        <h2>多语言文档的交叉索引</h2>
+        <p>由于历史原因，许多赛事文件使用主办国语言撰写 —— 西班牙语、法语、德语、意大利语乃至瑞典语。同一个赛事在不同语言版本中的记录方式常有差异，这种“叙事偏差”本身便是一种研究课题。通过对比多语种原始文件，可以还原更立体的<a href="https://wc-downloads-fifa.com">世界杯</a>叙事。目前已完成约三十届赛事的核心文档索引，涵盖秩序册、技术报告与官方摄影目录。</p>
+    </div>
+
+    <!-- 特点卡片 -->
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h3>原始文件</h3>
+            <p>官方比赛报告、裁判记录、球队名单，格式多为 PDF 或扫描件。</p>
+        </div>
+        <div class="feature-item">
+            <h3>专题汇编</h3>
+            <p>按年代、大洲、球队分类的索引，便于横向比较与深度查阅。</p>
+        </div>
+        <div class="feature-item">
+            <h3>版本说明</h3>
+            <p>每份资料附带来源、语种与清晰度标注，确保可追溯性。</p>
+        </div>
+    </div>
+
+    <!-- 简单FAQ摘要 -->
+    <div class="faq-mini">
+        <span>常被问及：</span> 资料是否包含早期世界杯？—— 是，1930 年至今大部分场次的技术文档已在收录范围内，并持续补充。
+    </div>
+
+    <!-- 尾页访问提示 -->
+    <div class="footer-note">
+        <p>如果你需要查阅上述赛事档案，或对某一届<a href="https://wc-downloads-fifa.com">世界杯</a>的原始材料有具体需求，可前往资料站检索。<br>
+        目前收录范围覆盖男足及部分女足世界杯，所有文件均保持原版样貌，仅供研究与参考。</p>
+    </div>
+
+    <!-- 细小版权/脚注不干扰 -->
+    <div style="text-align: right; margin-top: 1.8rem; font-size: 0.75rem; color: #a39588; border-top: 1px solid #efe8df; padding-top: 0.8rem;">
+        专题 · 数字文献整理
+    </div>
+</div>
+</body>
+</html>
